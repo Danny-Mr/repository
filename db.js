@@ -4,7 +4,8 @@ const PGHOST ="ep-weathered-dust-86515705.us-east-2.aws.neon.tech";
 const PGDATABASE ="neondb";
 const PGUSER ="Danny-Mr";
 const PGPASSWORD ="W9OjlZeJk1rI";
-
+const PGPORT = "5432";
+const ENDPOINT_ID = "ep-weathered-dust-86515705";
 // set up sequelize to point to our postgres database
 let sequelize = new Sequelize(PGDATABASE, PGUSER, PGPASSWORD, {
   host: PGHOST,
