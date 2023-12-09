@@ -12,8 +12,8 @@ pageRoutes.post("/", (req, res) => {
   if (authentication.isAuthenticated) {
     res.redirect(`/users`);
     req.session.auth = authentication;
-};
-  else {
+}
+else {
     res.redirect("/");
 }
 });

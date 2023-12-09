@@ -1,5 +1,5 @@
 const express = require("express");
-const clientSessions = require ("client-sessions")
+const clientSessions = require ('client-sessions')
 const pageRoutes = require("./routes/page.routes");
 const apiRoutes = require("./routes/api.routes");
 const { connect, sync } = require("./db");
