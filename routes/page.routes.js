@@ -8,9 +8,14 @@ pageRoutes.get("/", (req, res) => {
 });
 
 pageRoutes.post("/", (req, res) => {
-  const authentication = AuthenticationService.authenticate(null, null);
-  if (authentication.isAutheticated) res.redirect(`/list`);
-  else res.redirect("/");
+  const authentication = AuthenticationService.authenticate(req.body.username, req.body.password);
+  if (authentication.isAuthenticated) {
+    res.redirect(`/users`);
+    req.session.auth = authentication;
+};
+  else {
+    res.redirect("/");
+}
 });
 
 pageRoutes.get("/users", async (req, res) => {

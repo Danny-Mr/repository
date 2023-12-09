@@ -1,6 +1,12 @@
 class AuthenticationService {
   static authenticate(username, password) {
-    return { isAutheticated: true, token: "sasaxsdlcihsdoichisdjnc" };
+    const authentication = { isAuthenticated: false };
+
+    if (username==="admin" && password ==="password") {
+    return authentication.isAuthenticated = true
+  }
+
+  return authentication;
   }
 }
 
